@@ -5,9 +5,9 @@
 # python interpreter
 # VENV!!!!
 
-#! PAndas with matplotlib .plot()
-# import pandas as pd
-# import matplotlib.pyplot as plt
+#! Pandas with matplotlib .plot()
+import pandas as pd
+import matplotlib.pyplot as plt
 
 # # Load a dataset
 # data = {
@@ -26,7 +26,7 @@
 # plt.show()
 
 #? Plotly!! 
-# #! You, the student will create lesson11_b.py
+# # #! You, the student will create lesson11_b.py
 # import plotly.express as px
 # import plotly.data as pldata
 
@@ -48,7 +48,7 @@
 
 
 # # Initialize Dash app
-# app = Dash(__name__) # This creates the app object, to wich various things are added below. 
+# app = Dash(__name__) # This creates the app object, to which various things are added below. 
 # # __name__ is the name of the running Python module, which is your main module in this case
 
 # # Layout: This section creates the HTML components
@@ -89,7 +89,7 @@ app = Dash(__name__)
 
 df = pd.read_csv("some_csv.csv")
 
-app.layout = html.Div([  # Corrected here
+app.layout = html.Div([  
     dash_table.DataTable(
         df.to_dict('records'),  # Convert dataframe to dictionary format
         [{"name": i, "id": i} for i in df.columns],  # Create column headers dynamically -> list comprehension.
